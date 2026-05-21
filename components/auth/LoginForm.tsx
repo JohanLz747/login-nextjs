@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import {  useState } from "react";
 
 export default function LoginForm() {
   const [name, setName] = useState("");
@@ -10,14 +10,14 @@ export default function LoginForm() {
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
 
-  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+  async function handleSubmit(e:any) {
     e.preventDefault();
     setError("");
     setSuccess("");
     setLoading(true);
 
     try {
-      // Validación básica
+      // Validacion basica
       if (!name || !email || !password) {
         setError("Todos los campos son requeridos");
         setLoading(false);
@@ -59,9 +59,6 @@ export default function LoginForm() {
       setName("");
       setEmail("");
       setPassword("");
-
-      // Aquí puedes redirigir al usuario
-      // router.push("/login");
     } catch (err) {
       setError("Error en la conexión");
       console.error(err);
@@ -90,7 +87,6 @@ export default function LoginForm() {
         )}
 
         <form onSubmit={handleSubmit} className="space-y-4">
-          {/* Campo Nombre */}
           <div>
             <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
               Nombre

@@ -2,7 +2,7 @@ import { supabaseServer } from "@/lib/supabaseServer";
 
 export async function GET() {
   const { data, error } = await supabaseServer
-    .from("users")
+    .from("usuarios")
     .select("*");
 
   if (error) {
