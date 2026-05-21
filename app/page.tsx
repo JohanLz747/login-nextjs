@@ -4,258 +4,77 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="
-      relative
-      flex
-      min-h-screen
-      items-center
-      justify-center
-      overflow-hidden
-      bg-[#020617]
-      px-6
-      font-sans
-    ">
-      <div className="
-        absolute
-        top-[-120px]
-        left-[-120px]
-        h-96
-        w-96
-        rounded-full
-        bg-cyan-500/20
-        blur-3xl
-      " />
+    <div className="min-h-screen bg-zinc-50 dark:bg-black flex items-center justify-center px-6">
 
-      <div className="
-        absolute
-        bottom-[-150px]
-        right-[-150px]
-        h-[450px]
-        w-[450px]
-        rounded-full
-        bg-blue-600/20
-        blur-3xl
-      " />
+      <div className="w-full max-w-5xl bg-white dark:bg-zinc-900 rounded-3xl shadow-2xl overflow-hidden grid grid-cols-1 md:grid-cols-2">
 
-      <div className="
-        absolute
-        inset-0
-        bg-[radial-gradient(circle_at_top,rgba(59,130,246,0.15),transparent_50%)]
-      " />
-      <main className="
-        relative
-        z-10
-        w-full
-        max-w-md
-        rounded-[32px]
-        border
-        border-white/10
-        bg-white/5
-        p-10
-        shadow-2xl
-        backdrop-blur-2xl
-      ">
-        <div className="flex justify-center">
-          <div className="
-            rounded-full
-            border
-            border-cyan-400/20
-            bg-cyan-400/10
-            px-4
-            py-1
-            text-sm
-            font-medium
-            text-cyan-300
-            shadow-lg
-            shadow-cyan-500/10
-          ">
-            Frontend Developer Portfolio
-          </div>
-        </div>
-        <div className="mt-8 flex justify-center">
-          <div className="
-            flex
-            h-24
-            w-24
-            items-center
-            justify-center
-            rounded-3xl
-            bg-gradient-to-br
-            from-cyan-400
-            to-blue-600
-            shadow-xl
-            shadow-cyan-500/30
-          ">
-            <Image
-              className="brightness-0 invert"
-              src="/next.svg"
-              alt="Next.js Logo"
-              width={55}
-              height={55}
-              priority
-            />
-          </div>
-        </div>
+        {/* Lado Izquierdo */}
+        <div className="hidden md:flex flex-col justify-center bg-blue-600 p-10 text-white">
 
-        {/* Title */}
-        <div className="mt-8 text-center">
-
-          <h1 className="
-            text-4xl
-            font-extrabold
-            tracking-tight
-            text-white
-          ">
+          <h1 className="text-4xl font-bold mb-4">
             Bienvenido
           </h1>
 
-          <p className="
-            mt-4
-            text-base
-            leading-7
-            text-zinc-400
-          ">
-            Plataforma moderna de autenticación con
-            Next.js, Supabase y Tailwind CSS.
+          <p className="text-blue-100 text-lg leading-relaxed">
+            Sistema de autenticación desarrollado con Next.js y Supabase.
           </p>
 
+          <div className="mt-10">
+
+            <div className="bg-white/10 p-5 rounded-2xl backdrop-blur-sm">
+              <h3 className="text-2xl font-semibold mb-3">
+                Login con Supabase
+              </h3>
+
+              <p className="text-blue-100 leading-relaxed">
+                Proyecto moderno de inicio de sesión y registro de usuarios
+                utilizando autenticación segura con Supabase y frontend
+                desarrollado en Next.js.
+              </p>
+            </div>
+
+          </div>
         </div>
 
-        <div className="mt-10 space-y-5">
+        {/* Lado Derecho */}
+        <div className="flex flex-col justify-center p-8 md:p-12">
 
-          <div>
-            <label className="
-              mb-2
-              block
-              text-sm
-              font-medium
-              text-zinc-300
-            ">
-              Correo electrónico
-            </label>
+          <div className="mb-8">
+            <h2 className="text-3xl font-bold text-black dark:text-white">
+              Sistema Web
+            </h2>
 
-            <input
-              type="email"
-              placeholder="correo@gmail.com"
-              className="
-                w-full
-                rounded-xl
-                border
-                border-white/10
-                bg-white/5
-                px-4
-                py-3
-                text-white
-                outline-none
-                transition
-                placeholder:text-zinc-500
-                focus:border-cyan-400
-                focus:ring-2
-                focus:ring-cyan-400/30
-              "
-            />
+            <p className="text-gray-600 dark:text-gray-400 mt-2">
+              Plataforma de gestión moderna
+            </p>
           </div>
 
-          <div>
-            <label className="
-              mb-2
-              block
-              text-sm
-              font-medium
-              text-zinc-300
-            ">
-              Contraseña
-            </label>
+          <div className="space-y-4">
 
-            <input
-              type="password"
-              placeholder="********"
-              className="
-                w-full
-                rounded-xl
-                border
-                border-white/10
-                bg-white/5
-                px-4
-                py-3
-                text-white
-                outline-none
-                transition
-                placeholder:text-zinc-500
-                focus:border-cyan-400
-                focus:ring-2
-                focus:ring-cyan-400/30
-              "
-            />
+            <a
+              href="/login"
+              className="block w-full text-center bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-xl font-medium transition-colors"
+            >
+              Iniciar Sesión
+            </a>
+
+            <a
+              href="/register"
+              className="block w-full text-center border border-gray-300 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-zinc-800 text-black dark:text-white py-3 rounded-xl font-medium transition-colors"
+            >
+              Registrarse
+            </a>
+
+          </div>
+
+          <div className="mt-10 border-t border-gray-200 dark:border-zinc-700 pt-6">
+            <p className="text-sm text-gray-500 dark:text-gray-400 text-center">
+              © 2026 Sistema Web - Todos los derechos reservados
+            </p>
           </div>
 
         </div>
-        <div className="mt-8 flex flex-col gap-4">
-
-          <Link
-            href="/login"
-            className="
-              flex
-              items-center
-              justify-center
-              rounded-xl
-              bg-gradient-to-r
-              from-cyan-400
-              to-blue-600
-              py-3
-              text-base
-              font-semibold
-              text-white
-              transition-all
-              duration-300
-              hover:scale-[1.02]
-              hover:shadow-xl
-              hover:shadow-cyan-500/30
-            "
-          >
-            Iniciar Sesión
-          </Link>
-
-          <Link
-            href="/register"
-            className="
-              flex
-              items-center
-              justify-center
-              rounded-xl
-              border
-              border-white/10
-              bg-white/5
-              py-3
-              text-base
-              font-semibold
-              text-white
-              transition-all
-              duration-300
-              hover:bg-white/10
-              hover:scale-[1.02]
-            "
-          >
-            Crear Cuenta
-          </Link>
-
-        </div>
-
-        {/* Footer */}
-        <div className="
-          mt-8
-          border-t
-          border-white/10
-          pt-6
-          text-center
-        ">
-          <p className="text-sm text-zinc-500">
-            © 2026 Johan Developer Portfolio
-          </p>
-        </div>
-
-      </main>
-
+      </div>
     </div>
   );
 }
